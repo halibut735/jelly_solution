@@ -7,9 +7,17 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <set>
+#include "jelly.hpp"
+#include "global.hpp"
+#include "solution.hpp"
+using namespace std;
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    string path("/Users/bingoboy/Downloads/game36.txt");
+    game test(path);
+    test.run();
     return 0;
 }

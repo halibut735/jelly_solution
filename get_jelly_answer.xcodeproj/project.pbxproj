@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		967954311D2427CA009EF12C /* jelly.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9679542F1D2427CA009EF12C /* jelly.cpp */; };
+		9679543A1D24DE7D009EF12C /* global.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 967954381D24DE7D009EF12C /* global.cpp */; };
+		9679543D1D24EB45009EF12C /* solution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9679543B1D24EB45009EF12C /* solution.cpp */; };
 		968337D61D22CD7E003E389F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 968337D51D22CD7E003E389F /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9679542F1D2427CA009EF12C /* jelly.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = jelly.cpp; sourceTree = "<group>"; };
+		967954301D2427CA009EF12C /* jelly.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = jelly.hpp; sourceTree = "<group>"; };
+		967954381D24DE7D009EF12C /* global.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = global.cpp; sourceTree = "<group>"; };
+		967954391D24DE7D009EF12C /* global.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = global.hpp; sourceTree = "<group>"; };
+		9679543B1D24EB45009EF12C /* solution.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = solution.cpp; sourceTree = "<group>"; };
+		9679543C1D24EB45009EF12C /* solution.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = solution.hpp; sourceTree = "<group>"; };
 		968337D21D22CD7E003E389F /* get_jelly_answer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = get_jelly_answer; sourceTree = BUILT_PRODUCTS_DIR; };
 		968337D51D22CD7E003E389F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +67,12 @@
 			isa = PBXGroup;
 			children = (
 				968337D51D22CD7E003E389F /* main.cpp */,
+				967954391D24DE7D009EF12C /* global.hpp */,
+				967954381D24DE7D009EF12C /* global.cpp */,
+				967954301D2427CA009EF12C /* jelly.hpp */,
+				9679542F1D2427CA009EF12C /* jelly.cpp */,
+				9679543C1D24EB45009EF12C /* solution.hpp */,
+				9679543B1D24EB45009EF12C /* solution.cpp */,
 			);
 			path = get_jelly_answer;
 			sourceTree = "<group>";
@@ -118,6 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				967954311D2427CA009EF12C /* jelly.cpp in Sources */,
+				9679543A1D24DE7D009EF12C /* global.cpp in Sources */,
+				9679543D1D24EB45009EF12C /* solution.cpp in Sources */,
 				968337D61D22CD7E003E389F /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +255,7 @@
 				968337DB1D22CD7E003E389F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
