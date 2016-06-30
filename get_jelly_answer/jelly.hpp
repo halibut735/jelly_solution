@@ -35,9 +35,13 @@ public:
     void set(short x, short y, short dx, short dy, short dir, char c);
     bool is_end();
     
+    
     friend bool operator < (const jelly &a, const jelly &b) ;
     friend bool operator == (const jelly &a, const jelly &b);
     friend bool operator != (const jelly &a, const jelly &b) ;
+    
+    //for test
+    void get_status();
 };
 
 

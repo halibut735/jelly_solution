@@ -25,17 +25,19 @@ bool game::dfs(string &path) {
     }
     for (int i = 0; i < js.size(); ++ i) {
         path.push_back(js[i].color);
-        path.push_back(dchar[js[i].dir]);
+        //path.push_back(dchar[js[i].dir]);
         vector<jelly> store(js);
-        if (!maps_visited.count(js))
-            if(move(i)) {
-            cout << path << endl;
-            maps_visited.insert(js);
-            dfs(path);
+        
+        if(move(i)) {
+            if (!maps_visited.count(js)) {
+                //cout << path << endl;
+                maps_visited.insert(js);
+                dfs(path);
+            }
             js = store;
         }
         path.pop_back();
-        path.pop_back();
+        //path.pop_back();
     }
     return ret;
 }
@@ -50,8 +52,10 @@ bool game::move(short index, direction _dir) {
                 return false;
     }
     short tmp_dir = changedir[npos.first][npos.second];
-    if (tmp_dir >= 0 && js[index].dir != tmp_dir)
+    /*
+     if (tmp_dir >= 0 && js[index].dir != tmp_dir)
         cout << js[index].color << " dir:" << dchar[js[index].dir] << "->" << dchar[tmp_dir] << endl;
+     */
     js[index].dir = tmp_dir >= 0 ? tmp_dir : js[index].dir;
     //cout << js[index].color << " pos:" << npos.first << ", " << npos.second << endl;
     js[index].pos = npos;
@@ -94,6 +98,7 @@ void game::print_path() {
     for (auto each : solutions) {
         cout << each << endl;
     }
+    cout << "=================================" << endl;
 }
 
 void game::run() {
@@ -102,26 +107,9 @@ void game::run() {
     print_path();
 }
 
-
-
-
-bool operator < (const vector<jelly> &a, const vector<jelly> &b) {
-    for (int i = 0; i < a.size(); ++ i) {
-        if (a[i] != b[i])
-            return a[i] < b[i];
+void game::get_js_status() {
+    for (auto each : js) {
+        each.get_status();
     }
-    return a[a.size() - 1] < b[b.size() - 1];
-}
-
-bool operator == (const vector<jelly> &a, const vector<jelly> &b) {
-    for (int i = 0; i < a.size(); ++ i) {
-        if (a[i] != b[i])
-            return false;
-    }
-    return true;
-}
-
-bool operator != (vector<jelly> &a, vector<jelly> &b) {
-    return !(a == b);
 }
 

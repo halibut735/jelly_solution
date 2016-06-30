@@ -21,9 +21,6 @@ public:
     game(string _conf_path):conf_path(_conf_path){}
     void run();
     
-    bool friend operator < (const vector<jelly> &a, const vector<jelly> &b);
-    bool friend operator == (const vector<jelly> &a, const vector<jelly> &b);
-    bool friend operator != (const vector<jelly> &a, const vector<jelly> &b);
 private:
     string conf_path;
     short changedir[row][column];
@@ -38,6 +35,9 @@ private:
     void read_conf();
     bool dfs(string &path);
     void print_path();
+    
+    //for test
+    void get_js_status();
 };
 
 

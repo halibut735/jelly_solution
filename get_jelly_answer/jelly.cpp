@@ -7,6 +7,8 @@
 //
 
 #include "jelly.hpp"
+#include <iostream>
+using namespace std;
 
 
 
@@ -33,6 +35,7 @@ bool operator < (const jelly &a, const jelly &b) {
     return a.dir < b.dir;
 }
 
+
 bool operator == (const jelly &a, const jelly &b) {
     return a.pos == b.pos && a.color == b.color && a.dir == b.dir;
 }
@@ -40,3 +43,9 @@ bool operator == (const jelly &a, const jelly &b) {
 bool operator != (const jelly &a, const jelly &b) {
     return !(a == b);
 }
+
+
+void jelly::get_status() {
+    cout << color << ": pos " << pos.first << ", " << pos.second << ";dir " << dchar[dir] << endl;
+}
+

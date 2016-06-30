@@ -15,7 +15,7 @@
 #include "jelly.hpp"
 using namespace std;
 
-const short column = 5;
+const short column = 4;
 const short row = 7;
 pair<short, short> operator +(const pair<short, short> &a, const pair<short, short> &b);
 bool operator < (const pair<short, short> &a, const pair<short, short> &b);
