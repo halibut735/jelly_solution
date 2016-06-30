@@ -30,11 +30,14 @@ private:
     
     bool move(short index);
     bool move(short index, direction _dir);
-    bool restore(vector<jelly> &pre);
     bool is_out_of_boundary(pair<short, short> &npos);
     void read_conf();
     bool dfs(string &path);
     void print_path();
 };
-
+/*
+bool operator < (const vector<jelly> &a, const vector<jelly> &b);
+bool operator == (const vector<jelly> &a, const vector<jelly> &b);
+bool operator != (const vector<jelly> &a, const vector<jelly> &b);
+*/
 #endif /* solution_hpp */

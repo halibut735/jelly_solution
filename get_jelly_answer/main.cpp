@@ -16,7 +16,7 @@ using namespace std;
 
 
 int main(int argc, const char * argv[]) {
-    string path("/Users/bingoboy/Downloads/game36.txt");
+    string path("/Users/bingoboy/Downloads/game1.txt");
     game test(path);
     test.run();
     return 0;

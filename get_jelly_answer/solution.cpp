@@ -62,11 +62,6 @@ bool game::move(short index) {
     return game::move(index, (direction) js[index].dir);
 }
 
-bool game::restore(vector<jelly> &pre) {
-    js = pre;
-    return true;
-}
-
 
 bool game::is_out_of_boundary(pair<short, short> &npos) {
     if (npos.first < 0 || npos.first >= row) return true;
@@ -106,3 +101,28 @@ void game::run() {
     dfs(path);
     print_path();
 }
+
+
+
+/*
+bool operator < (const vector<jelly> &a, const vector<jelly> &b) {
+    for (int i = 0; i < a.size(); ++ i) {
+        if (a[i] != b[i])
+            return a[i] < b[i];
+    }
+    return a[a.size() - 1] < b[b.size() - 1];
+}
+
+bool operator == (const vector<jelly> &a, const vector<jelly> &b) {
+    for (int i = 0; i < a.size(); ++ i) {
+        if (a[i] != b[i])
+            return false;
+    }
+    return true;
+}
+
+bool operator != (vector<jelly> &a, vector<jelly> &b) {
+    return !(a == b);
+}
+*/
+

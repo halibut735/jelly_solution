@@ -22,27 +22,15 @@ void jelly::set(short x, short y, short dx, short dy, short _dir, char c) {
     color = c;
 }
 
-/*
-bool jelly::operator<(const jelly &jj) {
-    if (pos.first < jj.pos.first)
-        return true;
-    else
-        return pos.second < jj.pos.second;
-}
-*/
-
 
 bool operator < (const jelly &a, const jelly &b) {
-    if (a.pos.first == b.pos.first) {
-        if (a.pos.second == b.pos.second) {
-            if (a.color == b.color) {
-                return a.dir < b.dir;
-            }
-            return a.color < b.color;
-        }
+    if (a.pos.first != b.pos.first)
+        return a.pos.first < b.pos.first;
+    if (a.pos.second != b.pos.second)
         return a.pos.second < b.pos.second;
-    }
-    return a.pos.first < b.pos.first;
+    if (a.color != b.color)
+        return a.color < b.color;
+    return a.dir < b.dir;
 }
 
 bool operator == (const jelly &a, const jelly &b) {
@@ -52,24 +40,3 @@ bool operator == (const jelly &a, const jelly &b) {
 bool operator != (const jelly &a, const jelly &b) {
     return !(a == b);
 }
-
-bool operator < (vector<jelly> &a, vector<jelly> &b) {
-    for (int i = 0; i < a.size(); ++ i) {
-        if (a[i] != b[i])
-            return a[i] < b[i];
-    }
-    return a[a.size() - 1] < b[b.size() - 1];
-}
-
-bool operator == (vector<jelly> &a, vector<jelly> &b) {
-    for (int i = 0; i < a.size(); ++ i) {
-        if (a[i] != b[i])
-            return false;
-    }
-    return true;
-}
-
-bool operator != (vector<jelly> &a, vector<jelly> &b) {
-    return !(a == b);
-}
-
