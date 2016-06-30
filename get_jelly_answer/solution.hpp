@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <set>
+#include <unordered_set>
 #include "global.hpp"
 #include "jelly.hpp"
 using namespace std;

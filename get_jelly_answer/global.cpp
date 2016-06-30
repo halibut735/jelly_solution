@@ -13,8 +13,7 @@ pair<short, short> operator +(const pair<short, short> &a, const pair<short, sho
 }
 
 bool operator < (const pair<short, short> &a, const pair<short, short> &b) {
-    if (a.first < b.first)
-        return true;
-    else
-        return a.second < b.second;
+    if (a.first != b.first)
+        return a.first < b.first;
+    return a.second < b.second;
 }
