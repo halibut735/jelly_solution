@@ -16,6 +16,7 @@ using namespace std;
 
 
 int main(int argc, const char * argv[]) {
+    cout << "Please revise the map info if anything is wrong: row(" << row << ") && column(" << column << ")." << endl;
     string path("/Users/bingoboy/Downloads/others/jelly/game38.txt");
     game test(path);
     test.run();
