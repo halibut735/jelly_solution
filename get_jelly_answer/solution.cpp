@@ -104,7 +104,7 @@ void game::run() {
 
 
 
-/*
+
 bool operator < (const vector<jelly> &a, const vector<jelly> &b) {
     for (int i = 0; i < a.size(); ++ i) {
         if (a[i] != b[i])
@@ -124,5 +124,4 @@ bool operator == (const vector<jelly> &a, const vector<jelly> &b) {
 bool operator != (vector<jelly> &a, vector<jelly> &b) {
     return !(a == b);
 }
-*/
 
